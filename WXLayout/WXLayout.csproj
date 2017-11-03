@@ -1,0 +1,412 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A83778D9-C054-4F1C-9E65-3418B18F8D23}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WXLayout</RootNamespace>
+    <AssemblyName>WXLayout</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.6.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="controls\ChannelListControl.ascx" />
+    <Content Include="controls\CssControl.ascx" />
+    <Content Include="controls\DescriptionControl.ascx" />
+    <Content Include="controls\ImageListControl.ascx" />
+    <Content Include="controls\ImageNewsControl.ascx" />
+    <Content Include="controls\JavaScriptControl.ascx" />
+    <Content Include="controls\lib\control.js" />
+    <Content Include="controls\ListControl.ascx" />
+    <Content Include="controls\LogoControl.ascx" />
+    <Content Include="controls\MultiImageControl.ascx" />
+    <Content Include="controls\NewLogoControl.ascx" />
+    <Content Include="controls\NewsListControl.ascx" />
+    <Content Include="controls\SingleImageControl.ascx" />
+    <Content Include="controls\TitleLinkControl.ascx" />
+    <Content Include="layoutit\index0.html" />
+    <Content Include="layoutit\index.aspx" />
+    <Content Include="layoutit\js\scripts.js" />
+    <Content Include="layoutit\lib\jquery\dist\jquery.1.9.1.min.js" />
+    <Content Include="packages.config" />
+    <Content Include="layoutit\.bowerrc" />
+    <Content Include="layoutit\.gitignore" />
+    <Content Include="layoutit\.git\config" />
+    <Content Include="layoutit\.git\description" />
+    <Content Include="layoutit\.git\FETCH_HEAD" />
+    <Content Include="layoutit\.git\HEAD" />
+    <Content Include="layoutit\.git\hooks\applypatch-msg.sample" />
+    <Content Include="layoutit\.git\hooks\commit-msg.sample" />
+    <Content Include="layoutit\.git\hooks\post-update.sample" />
+    <Content Include="layoutit\.git\hooks\pre-applypatch.sample" />
+    <Content Include="layoutit\.git\hooks\pre-commit.sample" />
+    <Content Include="layoutit\.git\hooks\pre-push.sample" />
+    <Content Include="layoutit\.git\hooks\pre-rebase.sample" />
+    <Content Include="layoutit\.git\hooks\pre-receive.sample" />
+    <Content Include="layoutit\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="layoutit\.git\hooks\update.sample" />
+    <Content Include="layoutit\.git\index" />
+    <Content Include="layoutit\.git\info\exclude" />
+    <Content Include="layoutit\.git\logs\HEAD" />
+    <Content Include="layoutit\.git\logs\refs\heads\gh-pages" />
+    <Content Include="layoutit\.git\logs\refs\remotes\origin\HEAD" />
+    <Content Include="layoutit\.git\objects\00\ccda4b82d6fb2160592fd6b95cc18ad763ffe9" />
+    <Content Include="layoutit\.git\objects\04\6044f2a04802b73b9d73ec1fd04dc3edb0f4c1" />
+    <Content Include="layoutit\.git\objects\09\f8cda78a2082983b574be3abab705f8f169ab8" />
+    <Content Include="layoutit\.git\objects\0e\dc967a9787397da662a6bb9141236bd31dc87a" />
+    <Content Include="layoutit\.git\objects\13\053fa5dec2350959cf595be3c39faac58af315" />
+    <Content Include="layoutit\.git\objects\14\032aabd85b43a058cfc7025dd4fa9dd325ea97" />
+    <Content Include="layoutit\.git\objects\14\13fc609ab6f21774de0cb7e01360095584f65b" />
+    <Content Include="layoutit\.git\objects\20\7eb073cb72ea7064bf6d98dec95a1f5cb88791" />
+    <Content Include="layoutit\.git\objects\21\e19101e1a57da0dc43183b634db4b354560f5b" />
+    <Content Include="layoutit\.git\objects\25\74def2341cfe873ff55dbb12d4dc3b3bed8b1b" />
+    <Content Include="layoutit\.git\objects\2a\5ec783cec687e776999befea6a5b2699abcfe8" />
+    <Content Include="layoutit\.git\objects\2c\6b65afc02ca83e758a65a2c538b3fddca66a00" />
+    <Content Include="layoutit\.git\objects\2c\a6c93ea7bf5adc54ee6053503a696989250d3f" />
+    <Content Include="layoutit\.git\objects\2f\ae86ad38c3bb953ea8f3a5e823ac8f0505ee60" />
+    <Content Include="layoutit\.git\objects\32\2ed8834e115d20f08acf1dc3dd84669bb39871" />
+    <Content Include="layoutit\.git\objects\3a\3861c6425df0107202e6fd6034aa02d853c21e" />
+    <Content Include="layoutit\.git\objects\3e\806830f9b99aa9d9ce580819aa5c3e2b11baab" />
+    <Content Include="layoutit\.git\objects\3e\898e686aa28894ce8fe70b075d4f796b3f9d4a" />
+    <Content Include="layoutit\.git\objects\41\5159b91077b04a82082e73561de244aaf3cbcb" />
+    <Content Include="layoutit\.git\objects\42\c79d6e459ece1c606314879146768dad3d2656" />
+    <Content Include="layoutit\.git\objects\44\3ac1c0d2c9a85dcd052de10ae201d3e44481a1" />
+    <Content Include="layoutit\.git\objects\4c\f729e4342a51d8b300e8d43f2f78b0a6faf403" />
+    <Content Include="layoutit\.git\objects\4e\bb9337e622205d26a921f83f753e980b1b76b7" />
+    <Content Include="layoutit\.git\objects\4f\cfbd659e4bc060cd64eb1892ebca665f377d58" />
+    <Content Include="layoutit\.git\objects\50\4665c0ae10f3ca3835918650a51bd1d6dd0f58" />
+    <Content Include="layoutit\.git\objects\52\c5da2947aaac0de071d1701fb69fcabb0ea19c" />
+    <Content Include="layoutit\.git\objects\55\8328cba682ffaa64b32ec3fefe8943ab0c8ce1" />
+    <Content Include="layoutit\.git\objects\56\0f30b1bc96057d3e7b52fa6d0d692456d0fcdd" />
+    <Content Include="layoutit\.git\objects\5f\49bb37443c13fec81f2089d0d5559bc5a407e4" />
+    <Content Include="layoutit\.git\objects\61\6338aacd52302125e6f41388d8adf2765232f5" />
+    <Content Include="layoutit\.git\objects\63\de6b1d4c6b2b580003488544277d92155a1050" />
+    <Content Include="layoutit\.git\objects\64\539b54c3751a6d9adb44c8e3a45ba5a73b77f0" />
+    <Content Include="layoutit\.git\objects\64\bc4954f08edb879762f179daeee62a2578e991" />
+    <Content Include="layoutit\.git\objects\65\0e035eaace803bf04f789f773bdf988e34c27d" />
+    <Content Include="layoutit\.git\objects\71\201727f59ab68bdf7d4b281e33ebf1b6cfee41" />
+    <Content Include="layoutit\.git\objects\73\67cc3cddda6d9926896ec56a1552d3a478f20f" />
+    <Content Include="layoutit\.git\objects\7f\7c33d4c8e6d7867d37a2e26ff204895b293fa8" />
+    <Content Include="layoutit\.git\objects\82\938a3c88382431b213a56aa6d27d8572e4e9d0" />
+    <Content Include="layoutit\.git\objects\86\3c7c067bec30dc770d5d56d411c9e6ecea83c7" />
+    <Content Include="layoutit\.git\objects\87\1123f9567be73e8f041d0f3bc8ca191dd43435" />
+    <Content Include="layoutit\.git\objects\88\8dc3bd3eeb7f72231e32922a6f4a4a7a846602" />
+    <Content Include="layoutit\.git\objects\89\63375ee43ae87f2a66286b4734fc081c2e9fce" />
+    <Content Include="layoutit\.git\objects\89\828d18ff83ab7be8b63ddd6a4677b80d68f145" />
+    <Content Include="layoutit\.git\objects\8e\0e18a0f8f857e2b2a72332668140acfa6d7c08" />
+    <Content Include="layoutit\.git\objects\94\fb5490a2ed10b2c69a4a567a4fd2e4f706d841" />
+    <Content Include="layoutit\.git\objects\95\fc122fa759c44b7a307cf60069096131f50157" />
+    <Content Include="layoutit\.git\objects\96\d34452c640392461393396210e54aec065f32d" />
+    <Content Include="layoutit\.git\objects\9e\612858f802245ddcbf59788a0db942224bab35" />
+    <Content Include="layoutit\.git\objects\a0\10db6ec3a7c197749676b0a936cfe212f6d416" />
+    <Content Include="layoutit\.git\objects\a5\4b5236dacc6f18daa8b66a9ec261820565b4d6" />
+    <Content Include="layoutit\.git\objects\a8\1acfc7a0a52a66fc867ac7ca68d9d6fcb12b57" />
+    <Content Include="layoutit\.git\objects\ae\ee37416c83692a11f3246fa7d3bfccb1fc05ac" />
+    <Content Include="layoutit\.git\objects\b3\a8bc27bd8e4e404288d24ccce4084c9c7c5fa5" />
+    <Content Include="layoutit\.git\objects\b5\4a022a3a46dba4bd7dbe0dee2c69a163205675" />
+    <Content Include="layoutit\.git\objects\b8\1ff3c4d3804eaadfbad35915100aa374f5debe" />
+    <Content Include="layoutit\.git\objects\b8\3757596da490b1205d6299ce2cb0857e86d307" />
+    <Content Include="layoutit\.git\objects\b9\3a4953fff68df523aa7656497ee339d6026d64" />
+    <Content Include="layoutit\.git\objects\bc\3f416d1970930ff097f5ff14b3456dfc9d3aa3" />
+    <Content Include="layoutit\.git\objects\bc\a821b28058ee6e9e7d64e1e98b298d43793447" />
+    <Content Include="layoutit\.git\objects\bf\6aa80602d9303b61e8d5e63c10568e55b6a4d8" />
+    <Content Include="layoutit\.git\objects\cb\0c100bd1389a808bb3120bdd622ac52a905891" />
+    <Content Include="layoutit\.git\objects\cb\e49e7dcc731bd47e768334d9c022800c6682fb" />
+    <Content Include="layoutit\.git\objects\d3\bb8cdb886b1a707765faf4e9fcf6b10b81ea89" />
+    <Content Include="layoutit\.git\objects\d7\e581287aee7ce716709f446310bc9e1dec852e" />
+    <Content Include="layoutit\.git\objects\dc\95d8e4e4bdf33fd0d151908fbe19b0439be115" />
+    <Content Include="layoutit\.git\objects\dc\f351c867e1e85690e2e26c6a6fac8c10de9147" />
+    <Content Include="layoutit\.git\objects\e0\d8d4f8e95d4f4186e6fe0c3733bf93fec75353" />
+    <Content Include="layoutit\.git\objects\e7\9c065134f2cfcf3e44a59cffcb5f090232f98f" />
+    <Content Include="layoutit\.git\objects\e9\028fc1aab9834bb994ee7e7a576cc80fee62a5" />
+    <Content Include="layoutit\.git\objects\e9\fb45940bf88fb5df9debccc1020326ca6b6111" />
+    <Content Include="layoutit\.git\objects\eb\516e0cbaad23e77b2c28eb63cc85240b5fea43" />
+    <Content Include="layoutit\.git\objects\eb\52f7288d0a67e85582220c514d6ab0260ec8fa" />
+    <Content Include="layoutit\.git\objects\eb\e57fbf64d3c72a032b9db83898b99151d9d991" />
+    <Content Include="layoutit\.git\objects\ec\d23c4e9ac66fd7f3734b81a39cce8a68cccbcc" />
+    <Content Include="layoutit\.git\objects\ee\d17778c688271208406367c0c1681d81feca6f" />
+    <Content Include="layoutit\.git\objects\f0\ad6008ce9bdc7b65de25db38b1b89cb7a9eefc" />
+    <Content Include="layoutit\.git\objects\f9\90da82e442773c144e1a09b60c95cc75e3dfbf" />
+    <Content Include="layoutit\.git\objects\fa\d9ab1237c61d675c38599bcaaa063b7de5bb12" />
+    <Content Include="layoutit\.git\packed-refs" />
+    <Content Include="layoutit\.git\refs\heads\gh-pages" />
+    <Content Include="layoutit\.git\refs\remotes\origin\HEAD" />
+    <Content Include="layoutit\bower.json" />
+    <Content Include="layoutit\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="layoutit\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="layoutit\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="layoutit\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="layoutit\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="layoutit\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="layoutit\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="layoutit\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="layoutit\lib\jquery\dist\jquery.min.map" />
+    <Content Include="layoutit\package.json" />
+    <Content Include="layoutit\README.md" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="controls\banner.ascx" />
+    <Content Include="layoutit\css\layoutit.css" />
+    <Content Include="layoutit\en\index.html" />
+    <Content Include="layoutit\gulpfile.js" />
+    <Content Include="layoutit\img\default.jpg" />
+    <Content Include="layoutit\img\default_002.jpg" />
+    <Content Include="layoutit\img\default_003.jpg" />
+    <Content Include="layoutit\img\default_004.jpg" />
+    <Content Include="layoutit\img\default_005.jpg" />
+    <Content Include="layoutit\img\default_006.jpg" />
+    <Content Include="layoutit\img\default_007.jpg" />
+    <Content Include="layoutit\img\default_008.jpg" />
+    <Content Include="layoutit\img\favicon.png" />
+    <Content Include="layoutit\index.html" />
+    <Content Include="layoutit\js\html5shiv.js" />
+    <Content Include="layoutit\js\jquery-ui.js" />
+    <Content Include="layoutit\js\jquery.htmlClean.js" />
+    <Content Include="layoutit\js\scripts2.js" />
+    <Content Include="layoutit\lib\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="layoutit\lib\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="layoutit\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="layoutit\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="layoutit\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="layoutit\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="layoutit\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="layoutit\lib\bootstrap\dist\js\npm.js" />
+    <Content Include="layoutit\lib\jquery\dist\jquery.js" />
+    <Content Include="layoutit\lib\jquery\dist\jquery.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controls\banner.ascx.cs">
+      <DependentUpon>banner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\banner.ascx.designer.cs">
+      <DependentUpon>banner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ChannelListControl.ascx.cs">
+      <DependentUpon>ChannelListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ChannelListControl.ascx.designer.cs">
+      <DependentUpon>ChannelListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CssControl.ascx.cs">
+      <DependentUpon>CssControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\CssControl.ascx.designer.cs">
+      <DependentUpon>CssControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\DescriptionControl.ascx.cs">
+      <DependentUpon>DescriptionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\DescriptionControl.ascx.designer.cs">
+      <DependentUpon>DescriptionControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ImageListControl.ascx.cs">
+      <DependentUpon>ImageListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ImageListControl.ascx.designer.cs">
+      <DependentUpon>ImageListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ImageNewsControl.ascx.cs">
+      <DependentUpon>ImageNewsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ImageNewsControl.ascx.designer.cs">
+      <DependentUpon>ImageNewsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\JavaScriptControl.ascx.cs">
+      <DependentUpon>JavaScriptControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\JavaScriptControl.ascx.designer.cs">
+      <DependentUpon>JavaScriptControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ListControl.ascx.cs">
+      <DependentUpon>ListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ListControl.ascx.designer.cs">
+      <DependentUpon>ListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LogoControl.ascx.cs">
+      <DependentUpon>LogoControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\LogoControl.ascx.designer.cs">
+      <DependentUpon>LogoControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\MultiImageControl.ascx.cs">
+      <DependentUpon>MultiImageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\MultiImageControl.ascx.designer.cs">
+      <DependentUpon>MultiImageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\NewLogoControl.ascx.cs">
+      <DependentUpon>NewLogoControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\NewLogoControl.ascx.designer.cs">
+      <DependentUpon>NewLogoControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\NewsListControl.ascx.cs">
+      <DependentUpon>NewsListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\NewsListControl.ascx.designer.cs">
+      <DependentUpon>NewsListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\SingleImageControl.ascx.cs">
+      <DependentUpon>SingleImageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\SingleImageControl.ascx.designer.cs">
+      <DependentUpon>SingleImageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\TitleLinkControl.ascx.cs">
+      <DependentUpon>TitleLinkControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\TitleLinkControl.ascx.designer.cs">
+      <DependentUpon>TitleLinkControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layoutit\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layoutit\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="layoutit\.git\branches\" />
+    <Folder Include="layoutit\.git\objects\info\" />
+    <Folder Include="layoutit\.git\objects\pack\" />
+    <Folder Include="layoutit\.git\refs\tags\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50247</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50247/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
