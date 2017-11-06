@@ -66,9 +66,13 @@
 
     <div class="preview">Css控件</div>
     <div class="view">
-        <div asp-uc="LogoControl">
-            Css控件
-        </div>
+        <section asp-uc="CSSControl">
+            <h1>这里是一个CSS控件</h1>
+            <br>
+            <br   />
+            <div>这里是CSS内容</div>
+            <hr />
+        </section>
         
     </div>
 </div>

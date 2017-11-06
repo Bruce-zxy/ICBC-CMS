@@ -68,13 +68,13 @@
 
     <div class="preview">Logo控件</div>
     <div class="view">
-        <div asp-uc="LogoControl">
+        <section asp-uc="LogoControl">
             
             Logo控件 <br />
             Title : <%=Title %><br />
             Body : <%=Body %><br />
             <%=DateTime.Now.Second.ToString() %>
-        </div>
+        </section>
         
     </div>
 </div>

@@ -65,7 +65,7 @@
     </span>
 
     <div class="preview">图片列表控件</div>
-    <div class="view">
+    <section class="view">
         图片列表控件
-    </div>
+    </section>
 </div>

@@ -66,7 +66,7 @@
 
     <div class="preview">JavaScript控件</div>
     <div class="view">
-        <div asp-uc="LogoControl">
+        <div asp-uc="JavaScriptControl">
             JavaScript控件
         </div>
         
