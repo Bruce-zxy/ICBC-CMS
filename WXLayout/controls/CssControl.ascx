@@ -62,6 +62,12 @@
         <a class="btn btn-xs btn-default" href="#" rel="btn-block">通栏</a>
         <a class="btn btn-xs btn-default" href="#" rel="active">活动</a>
         <a class="btn btn-xs btn-default" href="#" rel="disabled">禁用</a>
+        <div asp-param="div">test</div>
+        <div asp-param="multi">
+            <input type="radio" name="multi" value="one" />
+            <input type="radio" name="multi" value="two" checked />
+            <input type="radio" name="multi" value="three" />
+        </div>
     </span>
 
     <div class="preview">Css控件</div>

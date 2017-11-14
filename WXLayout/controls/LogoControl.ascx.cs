@@ -11,6 +11,7 @@ namespace WXLayout.controls
     {
         public string Title { get; set; }
         public string Body { get; set; }
+        public string test { get; set; }
         
         protected void Page_Load(object sender, EventArgs e)
         {
